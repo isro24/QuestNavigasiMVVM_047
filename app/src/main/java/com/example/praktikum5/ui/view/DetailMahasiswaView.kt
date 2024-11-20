@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.praktikum5.model.Mahasiswa
+import androidx.compose.material3.Button
 
 
 
@@ -37,7 +38,17 @@ fun DetailMahasiswaView(
         listDataMhs.forEach { data ->
             DetailMhs(judul = data.first, isinya = data.second)
         }
+        Button(
+            onClick = { onClickButton() },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp)
+        ) {
+            Text("Kembali")
+        }
+
     }
+
 
 
 }
