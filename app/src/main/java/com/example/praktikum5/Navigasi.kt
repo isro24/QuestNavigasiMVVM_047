@@ -3,7 +3,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -12,7 +14,6 @@ import com.example.praktikum5.model.ListGender
 import com.example.praktikum5.ui.view.DetailMahasiswaView
 import com.example.praktikum5.ui.view.FormMahasiswaView
 import com.example.praktikum5.ui.viewmodel.MahasiswaViewModel
-import java.lang.reflect.Modifier
 
 enum class Halaman {
     Form,
