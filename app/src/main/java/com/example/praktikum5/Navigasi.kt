@@ -2,6 +2,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -47,7 +48,7 @@ fun Navigasi(
             composable(route = Halaman.Data.name) {
                 DetailMahasiswaView(
                     dataMhs = uiState,
-                    onBackClick = {
+                    onClickButton = {
                         navHost.popBackStack()
                     }
                 )

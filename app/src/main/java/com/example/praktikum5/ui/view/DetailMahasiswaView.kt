@@ -17,6 +17,7 @@ import com.example.praktikum5.model.Mahasiswa
 @Composable
 fun DetailMahasiswaView(
     dataMhs: Mahasiswa,
+    onClickButton: () -> Unit
 
 ){
     val listDataMhs = listOf(
