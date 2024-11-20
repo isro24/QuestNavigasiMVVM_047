@@ -1,5 +1,6 @@
 package com.example.praktikum5
 
+import Navigasi
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,14 +17,10 @@ import com.example.praktikum5.ui.theme.Praktikum5Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             Praktikum5Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Navigasi(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
