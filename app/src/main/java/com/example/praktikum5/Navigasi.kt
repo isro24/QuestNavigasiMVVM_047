@@ -1,12 +1,14 @@
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.praktikum5.model.ListGender
+import com.example.praktikum5.ui.view.DetailMahasiswaView
 import com.example.praktikum5.ui.view.FormMahasiswaView
 import com.example.praktikum5.ui.viewmodel.MahasiswaViewModel
 import java.lang.reflect.Modifier
@@ -39,6 +41,14 @@ fun Navigasi(
                     onSubmitClick = { listData ->
                         viewModel.saveDataMhs(listData)
                         navHost.navigate(Halaman.Data.name)
+                    }
+                )
+            }
+            composable(route = Halaman.Data.name) {
+                DetailMahasiswaView(
+                    dataMhs = uiState,
+                    onBackClick = {
+                        navHost.popBackStack()
                     }
                 )
             }
